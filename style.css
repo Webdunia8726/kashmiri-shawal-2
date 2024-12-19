@@ -1,0 +1,922 @@
+body {
+    margin: 0;
+  }
+
+/* Top Header Styles */
+.top-header {
+    background-color:#222222;
+    padding: 10px 20px;
+    font-size: 14px;
+    z-index: 1030;
+    position: relative;
+    color: white !important;
+}
+.top-header i{
+    color: white;
+}
+
+.top-header a {
+    text-decoration: none;
+    color:white;
+
+}
+
+.top-header a:hover {
+    color:white;
+}
+
+.social-icons i {
+    font-size: 18px;
+    margin: 0 8px;
+    color: white !important;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+    background-color: white;
+    z-index: 1020;
+    position: sticky;
+    top: 0; /* Ensures it stays below the top header */
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: black;
+}
+
+.navbar .navbar-brand:hover {
+    color: #ffc107;
+}
+
+.navbar-nav .nav-link {
+    color: black !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.navbar .form-control {
+    border: 1px solid #ddd;
+}
+
+/* Carousel Styling */
+
+
+/* Custom Buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: #494a4b; /* Button background color */
+border-radius: 50%; /* Make it circular */
+padding: 20px; /* Add padding for size */
+border: 2px solid #fff; /* Add a border for contrast */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+opacity: 1; /* Ensure buttons are always visible */
+width: 6%; /* Adjust width */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+border-color: #007bff; /* Change border color on hover */
+}
+
+/* Optional: Hide buttons on small screens */
+@media (max-width: 768px) {
+.carousel-control-prev,
+.carousel-control-next {
+width: 8%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+padding: 10px;
+}
+}
+
+
+/* css section  img */
+.left-card, .small-card {
+    position: relative;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .left-card img, .small-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Overlay text for left card */
+  .left-card .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Slightly dark background for contrast */
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .left-card .overlay-text h1, 
+  .left-card .overlay-text p {
+    margin: 0;
+  }
+
+  /* Overlay text for right cards */
+  .small-card .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .overlay-text button {
+    margin-top: 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .overlay-text button:hover {
+    background-color: #cc5200;
+  }
+
+
+  /* Media Query for Small Devices (Mobile) */
+@media (max-width: 576px) {
+  .left-card, .small-card {
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .left-card img, .small-card img {
+    object-fit: contain; /* Prevent image distortion */
+  }
+
+  .left-card .overlay-text, 
+  .small-card .overlay-text {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 10px;
+  }
+
+  .overlay-text button {
+    padding: 6px 12px; /* Smaller button for mobile */
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Medium Devices (Tablet) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .left-card, .small-card {
+    height: 80%; /* Adjust height for tablets */
+  }
+
+  .left-card .overlay-text, 
+  .small-card .overlay-text {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .overlay-text button {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Large Devices (Desktop) */
+@media (min-width: 769px) {
+  .left-card, .small-card {
+    height: 100%; /* Full height for desktop */
+  }
+
+  .left-card .overlay-text, 
+  .small-card .overlay-text {
+    font-size: 18px; /* Larger font size for desktop */
+    padding: 15px;
+  }
+
+  .overlay-text button {
+    padding: 10px 16px; /* Larger buttons for desktop */
+    font-size: 12px;
+  }
+}
+
+
+  /* img same place show */
+  .image-card {
+    text-align: center;
+  }
+  .image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .image-card h5 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .button-group button {
+    margin: 0 5px;
+  }
+
+  /* cta section */
+    /* CTA Section Styles */
+    .cta-section {
+        position: relative;
+        background: url('images/bg-cta.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+      }
+  
+      .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        z-index: 1;
+      }
+  
+      .cta-content {
+        position: relative;
+        z-index: 2;
+      }
+  
+      .cta-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+  
+      .cta-content p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+  
+      .cta-content .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+  
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .cta-content h1 {
+          font-size: 2rem;
+        }
+  
+        .cta-content p {
+          font-size: 1rem;
+        }
+      }
+
+
+      /* owl carsoule */
+        /* Owl Carousel Styles */
+    
+    .owl-carousel .item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+  
+      /* Title Below the Carousel */
+      .carousel-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 15px 0;
+        color: #333;
+      }
+  
+      /* Arrow Buttons Styling - Centered Over the Image */
+      .custom-nav-btn {
+        position: absolute;
+        top: 15%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background 0.3s ease;
+        z-index: 1000;
+      }
+  
+      /* Left arrow */
+      .custom-nav-btn.left-btn {
+        left: 10px;
+      }
+  
+      /* Right arrow */
+      .custom-nav-btn.right-btn {
+        right: 10px;
+      }
+  
+      .custom-nav-btn:hover {
+        background: #555;
+      }
+  
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .item img {
+          height: 200px;
+        }
+  
+        .carousel-title {
+          font-size: 18px;
+        }
+      }
+
+      /* reviews */
+
+      
+  /* Review Card Styles */
+.my-carousel-item{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;  padding-bottom: 50px;
+}
+  .my-review-card img.my-review-img {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .my-review-card img.my-review-img2 {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    margin-top: 50px;
+    margin-left: -25px;
+    
+  }
+  
+  /* Header section of the review */
+  .my-review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .my-review-name {
+    font-weight: bold;
+    margin-left: 12px;
+  }
+  .my-review-verified {
+    color: #3498db;
+    margin-left: 6px;
+  }
+  .my-review-date {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-left: 10px;
+  }
+  .my-review-rating {
+    color: #fcbf02;
+    margin: 12px 0;
+  }
+  .my-review-text {
+    font-size: 16px;
+  }
+  
+ 
+  .review-image {
+    display: flex; /* Enables a row layout */
+    justify-content: center; /* Centers the images within the container */
+    gap: 10px; /* Adds space between the images */
+    margin-top: 12px; /* Optional: Adds spacing above the container */
+    height: 160px;
+    width: 180px;
+
+  }
+  
+ 
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .my-custom-carousel .my-carousel-item {
+      padding: 15px;
+    }
+    .my-review-card img.my-review-img {
+      width: 60px;
+      height: 60px;
+    }
+    .my-review-text {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 576px) {
+    .my-custom-carousel .my-carousel-item {
+      padding: 10px;
+    }
+    .my-review-card img.my-review-img {
+      width: 50px;
+      height: 50px;
+    }
+    .my-review-text {
+      font-size: 13px;
+    }
+  }
+
+  
+  /* Google Reviews Header Styling */
+  .googlereview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .googlelogofull {
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .star-rating {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  .bgreviews {
+    background-color: #f8f8f8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+  }
+
+
+
+  /* faq section css */
+   /* FAQ Section Title */
+   .faq-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* FAQ Section Card Styling */
+  .faq-section .accordion-button {
+    color: #333;
+    font-weight: bold;
+    background-color: #e7e7e7;
+    transition: background-color 0.3s ease;
+  }
+
+  .faq-section .accordion-button:hover {
+    background-color: #d3d3d3;
+  }
+
+  .faq-section .accordion {
+    margin: 20px auto;
+    max-width: 800px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .faq-section .accordion {
+      padding: 10px;
+    }
+  }
+
+  .contact-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* Contact Us Section */
+  .contact-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Left & Right container sizes */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-left,
+  .contact-right {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 48%;
+    height: 400px;
+  }
+
+  /* Map Styling */
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  /* Social Media Icons */
+  .social-icons i {
+    font-size: 20px;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons i:hover {
+    color: #007bff;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-left,
+    .contact-right {
+      flex: 1 1 100%;
+      height: auto;
+    }
+  }
+
+    /* Blog Section Title */
+    .blogbg{
+      background-color: rgb(243, 235, 235);
+      padding: 10px;
+      text-align: center;
+
+    }
+    .blog-title {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 28px;
+        color: #333;
+        font-weight: bold;
+      }
+  
+      /* Blog Section */
+      .blog-section {
+        padding: 20px 0;
+      }
+  
+      /* Blog Cards */
+      .blog-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+  
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+  
+      /* Blog Image */
+      .blog-img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+      }
+  
+      /* Blog Title & Description */
+      .blog-content {
+        padding: 10px;
+      }
+  
+      /* Responsive */
+      @media (max-width: 768px) {
+        .blog-card {
+          flex: 1 1 100%;
+        }
+      }
+  
+      @media (min-width: 768px) and (max-width: 1200px) {
+        .blog-card {
+          flex: 1 1 48%;
+        }
+      }
+  
+      @media (min-width: 1200px) {
+        .blog-card {
+          flex: 1 1 23%;
+        }
+      }
+
+
+        /* General Footer Styling */
+  .footer-container {
+    background-color: #343a40;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* Social Media Icon Hover Effect */
+  .social-icons i {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .social-icons i:hover {
+    color: #007bff;
+  }
+
+  /* Adjust contact details style */
+  .footer-container p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .footer-container h5 {
+    font-weight: bold;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .social-icons i {
+      margin: 5px;
+    }
+  }
+
+/* Default styles (Desktop-first approach) */
+.styled-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem; /* Default size for desktop */
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg,black, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.styled-heading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  margin: 10px auto 0;
+  background: black;
+  border-radius: 5px;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (up to 576px) */
+@media (max-width: 576px) {
+  .styled-heading {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+    letter-spacing: 1px;
+  }
+
+  .styled-heading::after {
+    width: 30px; /* Adjust underline size */
+  }
+}
+
+/* Small Devices (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .styled-heading {
+    font-size: 2.2rem; /* Intermediate size for tablets */
+    letter-spacing: 1.5px;
+  }
+
+  .styled-heading::after {
+    width: 40px;
+  }
+}
+
+/* Medium Devices (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .styled-heading {
+    font-size: 2.4rem; /* Slightly smaller for medium devices */
+  }
+
+  .styled-heading::after {
+    width: 45px;
+  }
+}
+
+/* Large Devices (993px and above) */
+@media (min-width: 993px) {
+  .styled-heading {
+    font-size: 2.5rem; /* Default font size */
+    letter-spacing: 2px;
+  }
+
+  .styled-heading::after {
+    width: 50px; /* Default underline size */
+  }
+}
+
+
+/* paragraph */
+/* Default Styles for .styled-paragraph */
+.styled-paragraph {
+  font-family: 'Georgia', serif; /* Elegant serif font */
+  font-size: 1.1rem; /* Default size for desktop */
+  line-height: 1.8; /* Better readability */
+  color: #333; /* Dark gray text for contrast */
+  text-align: justify; /* Clean block alignment */
+  text-indent: 20px; /* Indentation for a classic paragraph look */
+  letter-spacing: 0.5px; /* Slight spacing for a modern feel */
+  word-spacing: 1px; /* Enhance readability */
+}
+
+/* Responsive Styling */
+
+/* Extra Small Devices (up to 576px) */
+@media (max-width: 576px) {
+  .styled-paragraph {
+    font-size: 1rem; /* Slightly smaller font for mobile */
+    line-height: 1.6; /* Adjust line height */
+    text-indent: 15px; /* Reduced indentation */
+  }
+}
+
+/* Small Devices (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .styled-paragraph {
+    font-size: 1.05rem; /* Intermediate size for tablets */
+    text-indent: 18px; /* Moderate indentation */
+  }
+}
+
+/* Medium Devices (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .styled-paragraph {
+    font-size: 1.1rem; /* Normal font size for medium devices */
+    text-indent: 20px;
+  }
+}
+
+/* Large Devices (993px and above) */
+@media (min-width: 993px) {
+  .styled-paragraph {
+    font-size: 1.2rem; /* Slightly larger font for desktops */
+    line-height: 1.8;
+    text-indent: 25px; /* Classic indentation for larger screens */
+  }
+}
+
+
+
+
+/* animation href */
+/* Default styles for the link */
+/* Default styles for the link */
+.animated-link {
+  text-decoration: none; /* Remove default underline */
+  color: white; /* Link color */
+  font-family: 'Georgia', serif; /* Elegant serif font */
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Underline animation effect */
+.animated-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Creates some space between text and underline */
+  width: 0;
+  height: 3px; /* Thicker underline for emphasis */
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.animated-link:hover {
+  color: #cc5200; /* Darker shade for hover */
+  transform: scale(1.05); /* Slightly enlarges the text for focus */
+}
+
+.animated-link:hover::after {
+  width: 100%; /* Expands underline fully */
+}
+
+/* Mobile-specific media query */
+@media (max-width: 576px) {
+  .animated-link {
+    font-size: 1rem; /* Slightly smaller text size for mobile */
+  }
+
+  .animated-link::after {
+    height: 2px; /* Slimmer underline for compact devices */
+  }
+
+  .animated-link:hover {
+    transform: scale(1.02); /* Reduced scaling for mobile usability */
+  }
+
+  .animated-link:hover::after {
+    width: 100%; /* Ensure underline animation remains */
+  }
+}
+
+
+/* Default button styling */
+.btn-dark {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text for contrast */
+  font-size: 1rem; /* Standard size */
+  font-weight: 500; /* Bold for emphasis */
+  padding: 12px 20px; /* Comfortable padding */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.btn-dark:hover {
+  background-color: #000; /* Darker shade for hover */
+  color: #ffcc00; /* Add color contrast on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Focus effect for accessibility */
+.btn-dark:focus {
+  outline: none;
+  border: 2px solid #ffcc00; /* Focus ring for accessibility */
+}
+
+/* Active state for click effect */
+.btn-dark:active {
+  transform: translateY(0); /* Reset position */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+
+/* General button design */
+.btn-primary1 {
+  display: block; /* Makes the button occupy block space for proper centering */
+  margin: 10px auto; /* Centers horizontally with auto margins */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Text size */
+  font-weight: 600;
+  padding: 10px 20px; /* Adjusted padding for balance */
+  width: 150px; /* Fixed width for uniformity */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Smooth hover transitions */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect */
+.btn-primary1:hover {
+  background-color: #555; /* Dark gray for hover effect */
+  color: #ffcc00; /* Gold text on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Active effect */
+.btn-primary1:active {
+  transform: scale(1); /* Button returns to its original scale on click */
+}
+
+
+
+/* video section */
+.video-section {
+  padding: 50px 0;
+  text-align: center;
+}
+.video-card {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.video-card video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
